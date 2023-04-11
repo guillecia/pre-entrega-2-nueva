@@ -1,0 +1,188 @@
+/* selectora de etiqueta*/
+/*selectora etiqueta {propiedad: valor;} */
+/*CSS lee de arriba hacia abajo*/
+/*trabajamos un solo archivo CSS para todo nuestro sitio*/
+/*selectora de clase y la selectora de ID*/
+/*para seleccionar la clase tengo que anteponer un . (punto) al valor del atributo class del html*/
+
+.mainindex{background-color: rgb(0, 0, 0);}
+
+ 
+/*Orden de precedencia en las declaraciones*/
+.parrafo{font-size: 20px;color:rgb(233, 233, 233);font-family: 'Barlow', sans-serif;}
+p{font-size: 28px;text-align:center ;font-family: 'Barlow', sans-serif;}
+#idParrafo{font-size:28px;}
+h3{font-size: 20px;color:rgb(233, 233, 233);font-family: 'Barlow', sans-serif;}
+
+
+
+/*Propiedades de Lista*/
+ul{list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 1px;
+    margin-bottom: -10px;
+    
+
+    }/*con esta prop quitamos vineta*/
+/*trabajo en nosotros*/
+li{list-style-type:none;display:inline-flex;font-family: 'Barlow', sans-serif;}
+a{font-size: 15px;text-decoration: none;font-family: 'Barlow', sans-serif;}
+
+.sticky{position:sticky;top: 0;}
+
+header {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;}
+.encabezado{
+    display: grid; place-content: center ;
+   
+}
+.menumenu{
+    display: grid; place-content: center ;  
+}
+main {display: flex; flex-direction: column;}
+.pixta img{width: 1070px;height: auto;}
+.pixta1 img{width: 1070px; height: auto;}
+/*de esta forma resolvemos vista desktop unicamente*/
+/*REVISAR QUE ESTA PASANDO CON MIS HEADER EN LAS PAGINAS: MENU, NOSOTROS,CONTACTO,ROLLS. 
+YA QUE NO FUNCIONAN IGUAL QUE LA DEL INDEX CUANDO MODIFICO EN CSS*/
+
+/* TRABAJANDO EN LA CORRECCION*/
+/* TRABAJANDO EN LA CORRECCION*/
+/* TRABAJANDO EN LA CORRECCION*/
+
+body {background-color: black;}
+header, footer{background-color: rgb(29, 31, 33);} 
+li{padding: 20px; margin: 20px;}
+.img-fluid{width: 100%;height: auto;}
+p, h1{color: rgb(255, 249, 241);font-family: 'Barlow', sans-serif;} /*ESTO TALVEZ LO BORRE*/
+.p20{padding: 20px;}
+.m20{margin: 20px;}
+.p2mobile{padding: 2px;}
+.m2mobile{margin:2px;}
+.mb15{margin-bottom: 0px;margin-left: 0px;}
+.ubicenter{display: flex;flex-direction: column;text-align: center; font-family: 'Barlow', sans-serif}
+.flexcard{display: flex;flex-direction: column;}
+.card{border-radius: 20px;align-items: center;}
+.bgcolorly{background-color: lightyellow;}
+.card input{width: 20%; height: 40px; border-radius: 20px; transition: 1s all;}
+.card input:hover{box-shadow: inset 0 -3em -3em rgb(194, 83, 224)
+    0 0 0 2px green
+    0.3em 0.3em 1em violet; cursor: pointer;}
+    
+
+*{padding: 0;margin: 0; font-family: 'Barlow', sans-serif;}
+
+    /* TRABAJANDO EN EL MENU GRIDS*/
+.gridmenus{
+    display: grid;
+    grid-template-areas:
+    "encabmenu encabmenu encabmenu encabmenu"
+    "card1 card2 card3 card4";
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto;}
+.encabezadomenu{grid-template-columns: encabezadomenu;}
+.card1{grid-area: card1;}
+.card2{grid-area: card2;}
+.card3{grid-area: card3;}
+.card4{grid-area: card4;}
+.col{color: black;}
+h1{text-align: center;}
+.fruta{grid-area: fruta; text-align: right; color: rgb(218, 201, 115); font-size: 15px;}
+
+    /* TRABAJANDO EN EL GRID MAIN CONTACTO*/
+.gridcontacto {
+    display: grid;
+    grid-template-areas: 
+    "encabezadocontacto encabezadocontacto"
+    "form datoscontacto";
+    grid-template-columns: 50% 50%;
+    grid-template-areas: auto auto;
+    }
+.encabezadocontacto
+    {grid-area: encabezadocontacto;}
+.form
+    {grid-area: form;}
+.datoscontacto
+    {grid-area: datoscontacto;}
+.colw{color: rgb(255, 249, 241);}
+.form form, .datoscontacto {display: flex;flex-direction: column;row-gap: 10px;}
+.datoscontacto{align-items: center;}
+.img20{width: 78%;height: auto;}
+.img10{width: 30%; height: auto;}
+.form .inputSubmit{height: 32px;}
+
+
+/*TRABAJO CON VERSION DESKTOP*/
+@media screen and (min-width:1024px){
+    /*TRABAJO CON PAGINA INDEX*/
+    .grid {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;}
+    header {grid-area: header;}
+    main {grid-area: main;}
+    footer {grid-area: footer;}
+    header,footer,ul{display:flex; flex-direction: row;}
+    .JCSpaceBetween{justify-content: space-between;}
+    a, label{font-size: 20px;color: rgb(255, 249, 241);font-family: 'Barlow', sans-serif}
+    .gridMain{
+        display: grid;
+        grid-template-areas: 
+        "imgprincipal imgprincipal imgprincipal"
+        "encabezado encabezado encabezado"
+        "parrafoi imgparrafo parrafod";
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 33% 33% 33%;}
+    .imgprincipal{grid-area:imgprincipal;}
+    .encabezado{grid-area:encabezado;}
+    .parrafoi{grid-area: parrafoi;}
+    .imgparrafo{grid-area: imgparrafo;}
+    .parrafod{grid-area: parrafod;}
+    h1{font-size: 40px;font-family: 'Barlow', sans-serif}
+    .gridrrss{display: grid;grid-template-areas:"rrss rrss rrss""wap insta face";
+        grid-template-columns: 50% 50%;grid: auto auto auto; align-items: center;}
+    .wap {grid-area: wap;}
+    .insta{grid-area: insta;}
+    .face{grid-area: face;}
+    
+    }
+
+/*TRABAJO CON VERSION TABLET*/
+@media screen and (min-width:769px) and (max-width:1023px){
+    body
+    {background-color: rgb(69, 56, 19);}
+}
+
+/*TRABAJO CON VERSION MOBILE*/
+@media screen and (max-width:768px){
+    header, main, footer {display: flex;flex-direction: column; align-items: center;}
+    ul{display: flex;flex-direction: row; justify-content: center;margin-bottom: 0;padding-left: 0;}
+    li{padding: 2px;margin: 2px;}
+    /*.marder{margin-right: -10px;}*/
+    a, label{font-size: 18px;color: rgb(255, 249, 241);font-family: 'Barlow', sans-serif}
+    .desaparecer{display: none;}
+    p{font-size: 18px;font-family: 'Barlow', sans-serif}
+    h1{font-size: 30px;font-family: 'Barlow', sans-serif}
+    .sticky{position: static;}
+    footer {display: flex;flex-direction: column-reverse; align-items: center;}
+    .gridmenus{display: flex;flex-direction: column;}
+    .gridcontacto, .form form, .datoscontacto {display: flex;
+        flex-direction: column;}
+    .desaparecer{display: none;}
+    .form form {display: flex;flex-direction: column;align-items: center;}
+
+
+
+}
