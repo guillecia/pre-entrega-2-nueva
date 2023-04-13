@@ -55,9 +55,6 @@ main {display: flex; flex-direction: column;}
 YA QUE NO FUNCIONAN IGUAL QUE LA DEL INDEX CUANDO MODIFICO EN CSS*/
 
 /* TRABAJANDO EN LA CORRECCION*/
-/* TRABAJANDO EN LA CORRECCION*/
-/* TRABAJANDO EN LA CORRECCION*/
-
 body {background-color: black;}
 header, footer{background-color: rgb(29, 31, 33);} 
 li{padding: 20px; margin: 20px;}
